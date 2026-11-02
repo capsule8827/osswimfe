@@ -25,7 +25,7 @@ export default function NewsPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/10" />
         <div className="relative z-10 px-6 text-center">
           <p className="text-sm font-bold uppercase tracking-[0.3em] text-brand">News</p>
-          <h1 className="mt-4 text-4xl font-black tracking-tight sm:text-6xl">뉴스/공지사항</h1>
+          <h1 className="mt-4 break-keep text-4xl font-black tracking-tight sm:text-6xl">뉴스/공지사항</h1>
         </div>
       </section>
 
