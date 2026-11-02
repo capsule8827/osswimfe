@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PlaceholderBlock from "@/components/PlaceholderBlock";
 import { news } from "@/lib/data";
 
@@ -31,22 +32,42 @@ export default function NewsPage() {
 
       <section className="mx-auto max-w-4xl px-5 py-20 sm:px-8">
         <ul className="divide-y divide-black/10 border-y border-black/10">
-          {sorted.map((item) => (
-            <li key={item.id} className="group py-7">
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-                <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
-                  <span className="inline-block w-fit rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand">
-                    {item.category}
-                  </span>
-                  <h2 className="text-lg font-extrabold text-black transition-colors group-hover:text-brand">
-                    {item.title}
-                  </h2>
+          {sorted.map((item) => {
+            const content = (
+              <>
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                  <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
+                    <span className="inline-block w-fit rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand">
+                      {item.category}
+                    </span>
+                    <h2 className="text-lg font-extrabold text-black transition-colors group-hover:text-brand">
+                      {item.title}
+                    </h2>
+                  </div>
+                  <span className="shrink-0 text-sm text-black/40">{formatDate(item.date)}</span>
                 </div>
-                <span className="shrink-0 text-sm text-black/40">{formatDate(item.date)}</span>
-              </div>
-              <p className="mt-3 text-sm leading-relaxed text-black/60">{item.summary}</p>
-            </li>
-          ))}
+                <p className="mt-3 text-sm leading-relaxed text-black/60">{item.summary}</p>
+                {item.link && (
+                  <span className="mt-3 inline-flex items-center gap-1 text-sm font-bold text-black transition-colors group-hover:text-brand">
+                    자세히 보기
+                    <span className="transition-transform group-hover:translate-x-1">→</span>
+                  </span>
+                )}
+              </>
+            );
+
+            return (
+              <li key={item.id} className="group py-7">
+                {item.link ? (
+                  <Link href={item.link} className="block">
+                    {content}
+                  </Link>
+                ) : (
+                  content
+                )}
+              </li>
+            );
+          })}
         </ul>
       </section>
     </>
