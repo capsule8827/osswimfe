@@ -32,9 +32,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 border-t border-white/10 pt-6 text-xs text-white/40">
           <p>&copy; 2026 오산시 수영연맹. All rights reserved.</p>
-          <p>본 사이트의 모든 대회 일정 및 정보는 더미 데이터이며 실제와 다를 수 있습니다.</p>
         </div>
       </div>
     </footer>

@@ -25,7 +25,7 @@ export default function CompetitionsPage() {
 
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
         <p className="text-sm text-black/50">
-          총 {competitions.length}개의 대회가 등록되어 있습니다. (더미 데이터)
+          총 {competitions.length}개의 대회가 등록되어 있습니다.
         </p>
 
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
