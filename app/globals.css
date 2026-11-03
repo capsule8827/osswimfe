@@ -3,8 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #0a0a0a;
-  --brand: #ff3b81;
-  --brand-dark: #e01f68;
+  --brand: #ffb6c8;
+  --brand-dark: #ff8fae;
+  --brand-strong: #d6336c;
 }
 
 @theme inline {
@@ -12,6 +13,7 @@
   --color-foreground: var(--foreground);
   --color-brand: var(--brand);
   --color-brand-dark: var(--brand-dark);
+  --color-brand-strong: var(--brand-strong);
   --font-sans: "Pretendard", "Noto Sans KR", Arial, sans-serif;
 }
 

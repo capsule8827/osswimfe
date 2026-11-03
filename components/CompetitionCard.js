@@ -18,7 +18,7 @@ export default function CompetitionCard({ competition }) {
         className="h-48 w-full transition-transform duration-500 group-hover:scale-105"
       />
       <div className="p-6">
-        <span className="inline-block rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand">
+        <span className="inline-block rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand-strong">
           {competition.category}
         </span>
         <h3 className="mt-3 text-lg font-extrabold leading-snug text-black">
@@ -34,7 +34,7 @@ export default function CompetitionCard({ competition }) {
             <dd>{competition.location}</dd>
           </div>
         </dl>
-        <span className="mt-5 inline-flex items-center gap-1 text-sm font-bold text-black transition-colors group-hover:text-brand">
+        <span className="mt-5 inline-flex items-center gap-1 text-sm font-bold text-black transition-colors group-hover:text-brand-strong">
           자세히 보기
           <span className="transition-transform group-hover:translate-x-1">→</span>
         </span>

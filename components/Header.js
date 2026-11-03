@@ -30,7 +30,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-bold text-black/70 transition-colors hover:text-brand"
+              className="text-sm font-bold text-black/70 transition-colors hover:text-brand-strong"
             >
               {link.label}
             </Link>
@@ -42,7 +42,7 @@ export default function Header() {
             href={EXTERNAL_APPLY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center rounded-full bg-brand px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-brand-dark"
+            className="inline-flex items-center rounded-full bg-brand px-5 py-2.5 text-sm font-bold text-black transition-colors hover:bg-brand-dark"
           >
             대회신청
           </a>
@@ -73,7 +73,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-3 text-base font-bold text-black/80 transition-colors hover:bg-black/5 hover:text-brand"
+                className="rounded-lg px-3 py-3 text-base font-bold text-black/80 transition-colors hover:bg-black/5 hover:text-brand-strong"
               >
                 {link.label}
               </Link>
@@ -83,7 +83,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center rounded-full bg-brand px-5 py-3 text-base font-bold text-white transition-colors hover:bg-brand-dark"
+              className="mt-2 inline-flex items-center justify-center rounded-full bg-brand px-5 py-3 text-base font-bold text-black transition-colors hover:bg-brand-dark"
             >
               대회신청
             </a>

@@ -25,7 +25,7 @@ export default function NewsPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/10" />
         <div className="relative z-10 px-6 text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.3em] text-brand">News</p>
+          <p className="text-sm font-bold uppercase tracking-[0.3em] text-brand-strong">News</p>
           <h1 className="mt-4 break-keep text-4xl font-black tracking-tight sm:text-6xl">뉴스/공지사항</h1>
         </div>
       </section>
@@ -37,10 +37,10 @@ export default function NewsPage() {
               <>
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
-                    <span className="inline-block w-fit rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand">
+                    <span className="inline-block w-fit rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand-strong">
                       {item.category}
                     </span>
-                    <h2 className="text-lg font-extrabold text-black transition-colors group-hover:text-brand">
+                    <h2 className="text-lg font-extrabold text-black transition-colors group-hover:text-brand-strong">
                       {item.title}
                     </h2>
                   </div>
@@ -48,7 +48,7 @@ export default function NewsPage() {
                 </div>
                 <p className="mt-3 text-sm leading-relaxed text-black/60">{item.summary}</p>
                 {item.link && (
-                  <span className="mt-3 inline-flex items-center gap-1 text-sm font-bold text-black transition-colors group-hover:text-brand">
+                  <span className="mt-3 inline-flex items-center gap-1 text-sm font-bold text-black transition-colors group-hover:text-brand-strong">
                     자세히 보기
                     <span className="transition-transform group-hover:translate-x-1">→</span>
                   </span>

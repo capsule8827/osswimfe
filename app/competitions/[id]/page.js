@@ -90,7 +90,7 @@ export default async function CompetitionDetailPage({ params }) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/10" />
         <div className="relative z-10 max-w-3xl px-6 text-center">
-          <span className="inline-block rounded-full bg-brand px-4 py-1 text-xs font-bold uppercase tracking-widest text-white">
+          <span className="inline-block rounded-full bg-brand px-4 py-1 text-xs font-bold uppercase tracking-widest text-black">
             {competition.category}
           </span>
           <h1 className="mt-5 break-keep text-3xl font-black leading-tight tracking-tight sm:text-5xl">
@@ -106,7 +106,7 @@ export default async function CompetitionDetailPage({ params }) {
         <div className="flex flex-wrap items-center justify-between gap-4">
           <Link
             href="/competitions"
-            className="inline-flex items-center gap-1 text-sm font-bold text-black/50 transition-colors hover:text-brand"
+            className="inline-flex items-center gap-1 text-sm font-bold text-black/50 transition-colors hover:text-brand-strong"
           >
             ← 대회일정 목록으로
           </Link>
@@ -115,7 +115,7 @@ export default async function CompetitionDetailPage({ params }) {
             <a
               href={competition.documentUrl}
               download
-              className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-brand-dark"
+              className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-bold text-black transition-colors hover:bg-brand-dark"
             >
               대회요강 다운로드 (PDF)
               <span aria-hidden="true">↓</span>
@@ -126,30 +126,30 @@ export default async function CompetitionDetailPage({ params }) {
         {/* 개요 */}
         <div className="mt-8 grid gap-6 rounded-2xl border border-black/10 p-6 sm:grid-cols-2 sm:p-8 lg:grid-cols-3">
           <div>
-            <dt className="text-xs font-bold uppercase tracking-widest text-brand">일시</dt>
+            <dt className="text-xs font-bold uppercase tracking-widest text-brand-strong">일시</dt>
             <dd className="mt-2 text-lg font-bold text-black">
               {competition.dateLabel ?? formatDate(competition.date)}
             </dd>
           </div>
           {competition.timeLabel && (
             <div>
-              <dt className="text-xs font-bold uppercase tracking-widest text-brand">경기시간</dt>
+              <dt className="text-xs font-bold uppercase tracking-widest text-brand-strong">경기시간</dt>
               <dd className="mt-2 text-base font-bold text-black">{competition.timeLabel}</dd>
             </div>
           )}
           <div>
-            <dt className="text-xs font-bold uppercase tracking-widest text-brand">장소</dt>
+            <dt className="text-xs font-bold uppercase tracking-widest text-brand-strong">장소</dt>
             <dd className="mt-2 text-lg font-bold text-black">{competition.location}</dd>
           </div>
           {competition.organizer && (
             <div>
-              <dt className="text-xs font-bold uppercase tracking-widest text-brand">주최 / 주관</dt>
+              <dt className="text-xs font-bold uppercase tracking-widest text-brand-strong">주최 / 주관</dt>
               <dd className="mt-2 text-base font-bold text-black">{competition.organizer}</dd>
             </div>
           )}
           {competition.capacity && (
             <div>
-              <dt className="text-xs font-bold uppercase tracking-widest text-brand">참가인원</dt>
+              <dt className="text-xs font-bold uppercase tracking-widest text-brand-strong">참가인원</dt>
               <dd className="mt-2 text-base font-bold text-black">{competition.capacity}</dd>
             </div>
           )}
@@ -169,7 +169,7 @@ export default async function CompetitionDetailPage({ params }) {
                 <SectionTitle>참가구분</SectionTitle>
                 <div className="mt-4 grid gap-6 sm:grid-cols-2">
                   <div>
-                    <p className="text-sm font-bold text-brand">학생부</p>
+                    <p className="text-sm font-bold text-brand-strong">학생부</p>
                     <TableWrap>
                       <thead>
                         <tr>
@@ -188,7 +188,7 @@ export default async function CompetitionDetailPage({ params }) {
                     </TableWrap>
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-brand">성인부</p>
+                    <p className="text-sm font-bold text-brand-strong">성인부</p>
                     <TableWrap>
                       <thead>
                         <tr>
@@ -281,26 +281,26 @@ export default async function CompetitionDetailPage({ params }) {
                 <SectionTitle>참가 신청 및 접수</SectionTitle>
                 <div className="mt-4 grid gap-6 rounded-2xl border border-black/10 p-6 sm:p-8">
                   <div>
-                    <dt className="text-xs font-bold uppercase tracking-widest text-brand">접수기간</dt>
+                    <dt className="text-xs font-bold uppercase tracking-widest text-brand-strong">접수기간</dt>
                     <dd className="mt-2 text-base font-bold text-black">
                       {competition.registration.period}
                     </dd>
                   </div>
                   <div className="grid gap-6 sm:grid-cols-2">
                     <div>
-                      <dt className="text-xs font-bold uppercase tracking-widest text-brand">출전종목</dt>
+                      <dt className="text-xs font-bold uppercase tracking-widest text-brand-strong">출전종목</dt>
                       <dd className="mt-2 text-base text-black/70">{competition.registration.eventLimit}</dd>
                     </div>
                     <div>
-                      <dt className="text-xs font-bold uppercase tracking-widest text-brand">참가비</dt>
+                      <dt className="text-xs font-bold uppercase tracking-widest text-brand-strong">참가비</dt>
                       <dd className="mt-2 text-base text-black/70">{competition.registration.fee}</dd>
                     </div>
                     <div>
-                      <dt className="text-xs font-bold uppercase tracking-widest text-brand">팀 인원</dt>
+                      <dt className="text-xs font-bold uppercase tracking-widest text-brand-strong">팀 인원</dt>
                       <dd className="mt-2 text-base text-black/70">{competition.registration.teamRule}</dd>
                     </div>
                     <div>
-                      <dt className="text-xs font-bold uppercase tracking-widest text-brand">
+                      <dt className="text-xs font-bold uppercase tracking-widest text-brand-strong">
                         등록 학생선수 번외참가
                       </dt>
                       <dd className="mt-2 text-base text-black/70">
@@ -309,26 +309,26 @@ export default async function CompetitionDetailPage({ params }) {
                     </div>
                   </div>
                   <div>
-                    <dt className="text-xs font-bold uppercase tracking-widest text-brand">접수 사이트</dt>
+                    <dt className="text-xs font-bold uppercase tracking-widest text-brand-strong">접수 사이트</dt>
                     <dd className="mt-2 text-base font-bold">
                       <a
                         href={applyUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-brand underline-offset-4 hover:underline"
+                        className="text-brand-strong underline-offset-4 hover:underline"
                       >
                         {applyUrl.replace(/^https?:\/\//, "")}
                       </a>
                     </dd>
                   </div>
                   <div>
-                    <dt className="text-xs font-bold uppercase tracking-widest text-brand">입금계좌</dt>
+                    <dt className="text-xs font-bold uppercase tracking-widest text-brand-strong">입금계좌</dt>
                     <dd className="mt-2 text-base font-bold text-black">
                       {competition.registration.bankAccount}
                     </dd>
                   </div>
                   <div>
-                    <dt className="text-xs font-bold uppercase tracking-widest text-brand">문의</dt>
+                    <dt className="text-xs font-bold uppercase tracking-widest text-brand-strong">문의</dt>
                     <dd className="mt-2 space-y-1 text-base text-black/70">
                       {competition.registration.contacts.map((c) => (
                         <p key={c.role}>
@@ -434,7 +434,7 @@ export default async function CompetitionDetailPage({ params }) {
             href={applyUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-2 inline-flex items-center justify-center rounded-full bg-brand px-8 py-4 text-base font-bold text-white transition-transform hover:scale-105 hover:bg-brand-dark"
+            className="mt-2 inline-flex items-center justify-center rounded-full bg-brand px-8 py-4 text-base font-bold text-black transition-transform hover:scale-105 hover:bg-brand-dark"
           >
             대회 신청하기 →
           </a>

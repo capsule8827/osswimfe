@@ -29,7 +29,7 @@ export default function Footer() {
                   key={sns.label}
                   href="#"
                   aria-label={sns.label}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-xs font-bold text-white/70 transition-colors hover:border-brand hover:text-brand"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-xs font-bold text-white/70 transition-colors hover:border-brand hover:text-brand-strong"
                 >
                   {sns.icon}
                 </a>

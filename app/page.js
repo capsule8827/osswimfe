@@ -24,7 +24,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/10" />
 
         <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.3em] text-brand">
+          <p className="text-sm font-bold uppercase tracking-[0.3em] text-brand-strong">
             Osan City Swimming Federation
           </p>
           <h1 className="mt-6 break-keep text-5xl font-black leading-[1.05] tracking-tight sm:text-7xl md:text-8xl">
@@ -42,13 +42,13 @@ export default function Home() {
               href={EXTERNAL_APPLY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-brand px-8 py-4 text-base font-bold text-white transition-transform hover:scale-105 hover:bg-brand-dark"
+              className="inline-flex items-center justify-center rounded-full bg-brand px-8 py-4 text-base font-bold text-black transition-transform hover:scale-105 hover:bg-brand-dark"
             >
               대회 신청하기
             </a>
             <Link
               href="/competitions"
-              className="inline-flex items-center justify-center rounded-full border border-white/30 px-8 py-4 text-base font-bold text-white transition-colors hover:border-brand hover:text-brand"
+              className="inline-flex items-center justify-center rounded-full border border-white/30 px-8 py-4 text-base font-bold text-white transition-colors hover:border-brand hover:text-brand-strong"
             >
               대회일정 보기
             </Link>
@@ -64,7 +64,7 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-5 py-24 sm:px-8">
         <div className="grid gap-10 md:grid-cols-2 md:items-center">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-brand">About Us</p>
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-brand-strong">About Us</p>
             <h2 className="mt-4 text-3xl font-black leading-tight tracking-tight sm:text-4xl">
               오산시 수영연맹은
               <br />
@@ -77,7 +77,7 @@ export default function Home() {
             </p>
             <Link
               href="/about"
-              className="mt-8 inline-flex items-center gap-2 border-b-2 border-brand pb-1 text-sm font-bold text-black transition-colors hover:text-brand"
+              className="mt-8 inline-flex items-center gap-2 border-b-2 border-brand pb-1 text-sm font-bold text-black transition-colors hover:text-brand-strong"
             >
               연맹 소개 자세히 보기 →
             </Link>
@@ -91,14 +91,14 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.2em] text-brand">Competitions</p>
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-brand-strong">Competitions</p>
               <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl">
                 다가오는 대회
               </h2>
             </div>
             <Link
               href="/competitions"
-              className="text-sm font-bold text-white/70 transition-colors hover:text-brand"
+              className="text-sm font-bold text-white/70 transition-colors hover:text-brand-strong"
             >
               전체 일정 보기 →
             </Link>
@@ -118,14 +118,14 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-5 py-24 sm:px-8">
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-brand">News</p>
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-brand-strong">News</p>
             <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl">
               최신 공지사항
             </h2>
           </div>
           <Link
             href="/news"
-            className="text-sm font-bold text-black/60 transition-colors hover:text-brand"
+            className="text-sm font-bold text-black/60 transition-colors hover:text-brand-strong"
           >
             전체 공지 보기 →
           </Link>
@@ -139,10 +139,10 @@ export default function Home() {
                 className="group flex flex-col gap-2 py-6 sm:flex-row sm:items-center sm:justify-between"
               >
                 <div className="flex items-center gap-4">
-                  <span className="shrink-0 rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand">
+                  <span className="shrink-0 rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand-strong">
                     {n.category}
                   </span>
-                  <span className="font-semibold text-black transition-colors group-hover:text-brand">
+                  <span className="font-semibold text-black transition-colors group-hover:text-brand-strong">
                     {n.title}
                   </span>
                 </div>

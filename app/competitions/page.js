@@ -18,7 +18,7 @@ export default function CompetitionsPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/10" />
         <div className="relative z-10 px-6 text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.3em] text-brand">Competitions</p>
+          <p className="text-sm font-bold uppercase tracking-[0.3em] text-brand-strong">Competitions</p>
           <h1 className="mt-4 break-keep text-4xl font-black tracking-tight sm:text-6xl">대회일정</h1>
         </div>
       </section>

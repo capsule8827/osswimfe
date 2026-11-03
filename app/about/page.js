@@ -38,13 +38,13 @@ export default function AboutPage() {
         <PlaceholderBlock label="ABOUT OSAN SWIM" tone="dark" className="absolute inset-0 h-full w-full opacity-60" />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/10" />
         <div className="relative z-10 px-6 text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.3em] text-brand">About</p>
+          <p className="text-sm font-bold uppercase tracking-[0.3em] text-brand-strong">About</p>
           <h1 className="mt-4 break-keep text-4xl font-black tracking-tight sm:text-6xl">연맹 소개</h1>
         </div>
       </section>
 
       <section className="mx-auto max-w-5xl px-5 py-20 sm:px-8">
-        <p className="text-sm font-bold uppercase tracking-[0.2em] text-brand">Introduction</p>
+        <p className="text-sm font-bold uppercase tracking-[0.2em] text-brand-strong">Introduction</p>
         <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl">
           오산시 수영연맹 소개
         </h2>
@@ -58,7 +58,7 @@ export default function AboutPage() {
 
       <section className="bg-black py-20 text-white">
         <div className="mx-auto max-w-5xl px-5 sm:px-8">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-brand">Vision</p>
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-brand-strong">Vision</p>
           <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl">연맹의 비전</h2>
 
           <div className="mt-12 grid gap-6 sm:grid-cols-3">
@@ -67,7 +67,7 @@ export default function AboutPage() {
                 key={item.title}
                 className="rounded-2xl border border-white/10 p-6 transition-colors hover:border-brand"
               >
-                <span className="text-sm font-black text-brand">0{idx + 1}</span>
+                <span className="text-sm font-black text-brand-strong">0{idx + 1}</span>
                 <h3 className="mt-4 text-lg font-extrabold">{item.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-white/60">{item.desc}</p>
               </div>
@@ -77,7 +77,7 @@ export default function AboutPage() {
       </section>
 
       <section className="mx-auto max-w-5xl px-5 py-20 sm:px-8">
-        <p className="text-sm font-bold uppercase tracking-[0.2em] text-brand">Organization</p>
+        <p className="text-sm font-bold uppercase tracking-[0.2em] text-brand-strong">Organization</p>
         <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl">조직도</h2>
         <p className="mt-4 text-sm text-black/50">
           * 아래 조직 구성 및 인명은 예시를 위한 더미 데이터입니다.
@@ -89,7 +89,7 @@ export default function AboutPage() {
               key={node.role}
               className="flex flex-col gap-2 rounded-xl border border-black/10 p-5 transition-colors hover:border-brand sm:flex-row sm:items-center sm:justify-between"
             >
-              <span className="inline-block w-fit rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand">
+              <span className="inline-block w-fit rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand-strong">
                 {node.role}
               </span>
               <span className="text-sm font-semibold text-black/70">{node.name}</span>
