@@ -22,7 +22,7 @@ export default function Header() {
           className="text-lg font-black tracking-tight sm:text-xl"
           onClick={() => setOpen(false)}
         >
-          오산수영연맹
+          오산시수영연맹
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
