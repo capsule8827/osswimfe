@@ -12,13 +12,7 @@ export default function Footer() {
         <div className="flex flex-col gap-10 sm:flex-row sm:justify-between">
           <div>
             <p className="text-xl font-black tracking-tight">오산수영연맹</p>
-            <p className="mt-3 text-sm leading-relaxed text-white/60">
-              경기도 오산시 중앙로 123 오산시 중앙생활체육관 2층
-              <br />
-              TEL. 031-123-4567 · FAX. 031-123-4568
-              <br />
-              E-MAIL. osswim@osswim-federation.or.kr
-            </p>
+            <p className="mt-3 text-sm leading-relaxed text-white/60">오산스포츠센터 내 오산시수영연맹</p>
           </div>
 
           <div>

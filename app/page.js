@@ -23,14 +23,12 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/10" />
 
-        <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 text-center">
+        <div className="relative z-10 mx-auto flex w-full min-w-0 max-w-5xl flex-col items-center px-6 text-center">
           <p className="text-sm font-bold uppercase tracking-[0.3em] text-brand-strong">
             Osan City Swimming Federation
           </p>
-          <h1 className="mt-6 break-keep text-5xl font-black leading-[1.05] tracking-tight sm:text-7xl md:text-8xl">
-            오산시
-            <br />
-            수영연맹
+          <h1 className="mt-6 whitespace-nowrap text-[length:clamp(1.75rem,9vw,6rem)] font-black leading-[1.05] tracking-tight">
+            오산시 수영연맹
           </h1>
           <p className="mt-6 max-w-xl text-base text-white/70 sm:text-lg">
             물을 가르는 모든 순간, 오산시 수영연맹이 함께합니다.

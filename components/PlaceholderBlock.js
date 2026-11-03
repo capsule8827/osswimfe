@@ -9,7 +9,7 @@ export default function PlaceholderBlock({ label, tone = "dark", className = "" 
 
   return (
     <div
-      className={`relative flex items-center justify-center overflow-hidden ${TONES[tone]} ${className}`}
+      className={`flex items-center justify-center overflow-hidden ${TONES[tone]} ${className}`}
     >
       <span className={`px-4 text-center text-sm font-bold uppercase tracking-widest ${textTone}`}>
         {label}

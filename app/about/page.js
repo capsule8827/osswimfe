@@ -6,18 +6,15 @@ export const metadata = {
 };
 
 const ORG_CHART = [
-  { role: "회장", name: "김oo" },
-  { role: "수석부회장", name: "이oo" },
-  {
-    role: "부회장",
-    name: "박oo · 최oo · 정oo",
-  },
+  { role: "회장", name: "김ㅇ현" },
+  { role: "수석부회장", name: "김ㅇ을" },
+  { role: "부회장", name: "박ㅇ숙, 이ㅇ수" },
+  { role: "감사", name: "최ㅇ식" },
+  { role: "사무장", name: "김ㅇ희" },
   {
     role: "이사",
-    name: "강oo · 조oo · 윤oo · 임oo · 한oo",
+    name: "김ㅇ환, 변ㅇ영, 김ㅇ경, 김ㅇ미, 문ㅇ, 박ㅇ선, 양ㅇ숙, 유ㅇ옥, 이ㅇ자, 이ㅇ경, 이ㅇ태, 임ㅇ란, 최ㅇ란, 최ㅇ한",
   },
-  { role: "사무국장", name: "오oo" },
-  { role: "사무국 (운영·경기·홍보)", name: "연맹 사무처 직원" },
 ];
 
 const VISION_ITEMS = [
@@ -37,9 +34,11 @@ export default function AboutPage() {
       <section className="relative flex h-[50vh] min-h-[360px] items-center justify-center bg-black text-white">
         <PlaceholderBlock label="ABOUT OSAN SWIM" tone="dark" className="absolute inset-0 h-full w-full opacity-60" />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/10" />
-        <div className="relative z-10 px-6 text-center">
+        <div className="relative z-10 w-full min-w-0 px-6 text-center">
           <p className="text-sm font-bold uppercase tracking-[0.3em] text-brand-strong">About</p>
-          <h1 className="mt-4 break-keep text-4xl font-black tracking-tight sm:text-6xl">연맹 소개</h1>
+          <h1 className="mt-4 whitespace-nowrap text-[length:clamp(1.75rem,7vw,3.75rem)] font-black tracking-tight">
+            연맹 소개
+          </h1>
         </div>
       </section>
 
@@ -79,20 +78,19 @@ export default function AboutPage() {
       <section className="mx-auto max-w-5xl px-5 py-20 sm:px-8">
         <p className="text-sm font-bold uppercase tracking-[0.2em] text-brand-strong">Organization</p>
         <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl">조직도</h2>
-        <p className="mt-4 text-sm text-black/50">
-          * 아래 조직 구성 및 인명은 예시를 위한 더미 데이터입니다.
-        </p>
 
         <div className="mt-10 space-y-3">
           {ORG_CHART.map((node) => (
             <div
               key={node.role}
-              className="flex flex-col gap-2 rounded-xl border border-black/10 p-5 transition-colors hover:border-brand sm:flex-row sm:items-center sm:justify-between"
+              className="flex flex-col gap-2 rounded-xl border border-black/10 p-5 transition-colors hover:border-brand sm:flex-row sm:items-start sm:justify-between"
             >
-              <span className="inline-block w-fit rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand-strong">
+              <span className="inline-block w-fit shrink-0 rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand-strong">
                 {node.role}
               </span>
-              <span className="text-sm font-semibold text-black/70">{node.name}</span>
+              <span className="text-sm font-semibold leading-relaxed text-black/70 sm:flex-1">
+                {node.name}
+              </span>
             </div>
           ))}
         </div>
