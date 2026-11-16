@@ -8,6 +8,7 @@ const NAV_LINKS = [
   { href: "/", label: "홈" },
   { href: "/about", label: "소개" },
   { href: "/competitions", label: "대회일정" },
+  { href: "/results", label: "경기결과" },
   { href: "/news", label: "뉴스" },
 ];
 
