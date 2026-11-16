@@ -5,6 +5,9 @@ import Footer from "@/components/Footer";
 export const metadata = {
   title: "오산시 수영연맹",
   description: "오산시 수영연맹 공식 홈페이지 - 대회일정, 공지사항, 연맹소개",
+  other: {
+    "naver-site-verification": "8e6fd78fbf19622f9aa7705a73a1610324b089cf",
+  },
 };
 
 export default function RootLayout({ children }) {
