@@ -52,14 +52,24 @@ export default function ResultsPage() {
               <h3 className="break-keep text-lg font-extrabold leading-snug text-black">
                 {item.title}
               </h3>
-              <a
-                href={item.href}
-                download
-                className="inline-flex w-fit items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-bold text-black transition-colors hover:bg-brand-dark"
-              >
-                다운로드 (PDF)
-                <span aria-hidden="true">↓</span>
-              </a>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-black/15 px-5 py-2.5 text-sm font-bold text-black transition-colors hover:border-brand hover:text-brand-strong"
+                >
+                  미리보기
+                </a>
+                <a
+                  href={item.href}
+                  download
+                  className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-bold text-black transition-colors hover:bg-brand-dark"
+                >
+                  다운로드 (PDF)
+                  <span aria-hidden="true">↓</span>
+                </a>
+              </div>
             </div>
           ))}
         </div>
