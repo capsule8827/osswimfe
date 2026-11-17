@@ -65,6 +65,16 @@ export default function NewsPage() {
                 ) : (
                   content
                 )}
+                {item.attachment && (
+                  <a
+                    href={item.attachment.href}
+                    download
+                    className="mt-4 inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-bold text-black transition-colors hover:bg-brand-dark"
+                  >
+                    {item.attachment.label}
+                    <span aria-hidden="true">↓</span>
+                  </a>
+                )}
               </li>
             );
           })}
