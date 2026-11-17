@@ -22,6 +22,10 @@ const RESULTS = [
     title: "제1회 오산시수영연맹회장배 수영대회 - 성인부 종합점수",
     href: "/docs/results-adult-score.pdf",
   },
+  {
+    title: "대회신기록표",
+    href: "/results/records-table.pdf",
+  },
 ];
 
 export default function ResultsPage() {
