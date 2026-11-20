@@ -1,3 +1,5 @@
+import VisitorCounter from "@/components/VisitorCounter";
+
 const SNS_LINKS = [
   { label: "Instagram", icon: "IG" },
   { label: "YouTube", icon: "YT" },
@@ -32,8 +34,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-white/10 pt-6 text-xs text-white/40">
+        <div className="mt-10 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; 2026 오산시 수영연맹. All rights reserved.</p>
+          <VisitorCounter />
         </div>
       </div>
     </footer>
