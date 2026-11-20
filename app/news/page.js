@@ -47,24 +47,18 @@ export default function NewsPage() {
                   <span className="shrink-0 text-sm text-black/40">{formatDate(item.date)}</span>
                 </div>
                 <p className="mt-3 text-sm leading-relaxed text-black/60">{item.summary}</p>
-                {item.link && (
-                  <span className="mt-3 inline-flex items-center gap-1 text-sm font-bold text-black transition-colors group-hover:text-brand-strong">
-                    자세히 보기
-                    <span className="transition-transform group-hover:translate-x-1">→</span>
-                  </span>
-                )}
+                <span className="mt-3 inline-flex items-center gap-1 text-sm font-bold text-black transition-colors group-hover:text-brand-strong">
+                  자세히 보기
+                  <span className="transition-transform group-hover:translate-x-1">→</span>
+                </span>
               </>
             );
 
             return (
               <li key={item.id} className="group py-7">
-                {item.link ? (
-                  <Link href={item.link} className="block">
-                    {content}
-                  </Link>
-                ) : (
-                  content
-                )}
+                <Link href={`/news/${item.id}`} className="block">
+                  {content}
+                </Link>
                 {item.attachment && (
                   <a
                     href={item.attachment.href}

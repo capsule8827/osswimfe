@@ -133,7 +133,7 @@ export default function Home() {
           {latestNews.map((n) => (
             <li key={n.id}>
               <Link
-                href={n.link ?? "/news"}
+                href={`/news/${n.id}`}
                 className="group flex flex-col gap-2 py-6 sm:flex-row sm:items-center sm:justify-between"
               >
                 <div className="flex items-center gap-4">
